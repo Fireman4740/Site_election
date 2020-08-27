@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="fr-FR">
+	<head>
+
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<link rel="shortcut icon" href="Cubes.ico"/>
+		<title>Élections - Duruy</title>
+
+  </head>
+  <body>
+		<style>
+			
+			</style>
+		<div >
+			  <div id="main">
+
+				<header >
+					<h1>Duruy Teacher Awards 2019 </h1>
+				</br>
+				</br>
+					<h2>Votez pour le spécimen le plus étrange du lycée de l'année 2019 !</header>
+    <script type="text/javascript">
+      var yes=0;
+      var maybe=0;
+      var no=0;
+      var notsure=0;
+      var output = new Array();
+      function writeText (form) {
+      //si Oui
+          if(document.getElementById('yes').checked) {
+        yes=yes+1;
+        output[0] = output[0] + yes;
+        document.getElementById('yes1').innerHTML=yes;
+      }else   {
+           document.getElementById('yes1').innerHTML=output[0];
+          }
+      //Si peu être  
+           if(document.getElementById('maybe').checked) {
+        maybe=maybe+1;
+        document.getElementById('maybe1').innerHTML=maybe;
+      }else   {
+           document.getElementById('maybe1').innerHTML=maybe;
+          }
+      //Si non 
+           if(document.getElementById('no').checked) {
+        no=no+1;
+        document.getElementById('no1').innerHTML=no;
+      }else   {
+           document.getElementById('maybe1').innerHTML=maybe;
+          }
+      //Si pas sure    
+           if(document.getElementById('notsure').checked) {
+        notsure=notsure+1;
+        document.getElementById('notsure1').innerHTML=notsure;
+      }else   {
+           document.getElementById('maybe1').innerHTML=maybe;
+          }
+      }
+      </script>
+      
+       
+      
+      <form id="form1" name="form1" method=:"get" action="">
+        <table width="173" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td colspan="2" align="center"> </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><img src="site-elements/headers&amp;logos/graph.png" width="165" height="84" /></td>
+          </tr>
+        <tr>
+          <td colspan="2" style="color:#FFF; background-color:#000; font-family:'Times New Roman', Times, serif; text-align:left; padding:8px">DO YOU FEEL YOUR<br />
+            COMMUNITEE LEADERS<br />
+            ARE DOING ENOUGH<br />
+            FOR DISABILITY?</td>
+          </tr>
+        <tr>
+          <td width="93" align="left" bgcolor="#FFFFFF">
+            <input type="radio" name="radio" id="yes" value="yes" />
+            <label for="yes"><strong>YES</strong></label></td>
+          <td width="80" bgcolor="#FFFFFF"><div class="output" id="yes1"></div></td>
+        </tr>
+        <tr>
+          <td align="left" bgcolor="#FFFFFF"><input type="radio" name="radio" id="maybe" value="maybe" />
+            <strong>
+              <label for="maybe">MAYBE</label>
+            </strong></td>
+          <td width="80" bgcolor="#FFFFFF"><div class="output" id="maybe1"></div></td>
+          </tr>
+        <tr>
+          <td align="left" bgcolor="#FFFFFF"><input type="radio" name="radio" id="no" value="no" />
+            <strong>
+              <label for="no">NO</label>
+            </strong></td>
+          <td width="80" bgcolor="#FFFFFF"><div class="output" id="no1"></div></td>
+          </tr>
+        <tr>
+          <td align="left" bgcolor="#FFFFFF"><input type="radio" name="radio" id="notsure" value="notsure" />
+            <strong>
+              <label for="notsure">NOT SURE</label>
+            </strong></td>
+          <td width="80" bgcolor="#FFFFFF"><div class="output" id="notsure1"></div></td>
+          </tr>
+        <tr>
+          <td align="left"></td>
+          <td><input type="button" id="vote" alt="Vote Now" onClick="writeText(this.form)"/></td>
+        </tr>
+      </table>
+      </form>
+  </body>
+</html>
